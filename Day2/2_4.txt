@@ -1,4 +1,4 @@
-// 배열 두배 만들기_try1
+// 배열 두배 만들기 try_1
 class Solution {
     public int[] solution(int[] numbers) { 
         int[] numbers = {};
@@ -10,4 +10,14 @@ class Solution {
         }
         
         return copyArr;
+}
+
+// try_2 : 새로운 배열을 생성해서 두배 값을 복사하고 return 해야 한다고 생각했는데, 각 값을 두배해서 return 하면 더 간단하다.
+class Solution {
+    public int[] solution(int[] numbers) {
+        for(int i = 0; i < numbers.length; i++) {
+            numbers[i] = numbers[i] * 2;
+        }
+        return numbers;
+    }
 }
