@@ -1,0 +1,17 @@
+// 중앙값 구하기
+class Solution {
+    public int solution(int[] array) {
+        int n = array.length;
+        
+        for(int i = 0; i < n - 1; i++) {
+            for(int j = 0; j < n - 1 - i; j++) {
+                if(array[j] > array[j+1]) {    // 오름차순 정렬, 앞자리 값이 더 크다면
+                    int temp = array[j];       // 임시 변수를 만들어 앞자리 값을 저장
+                    array[j] = array[j+1];     // 더 작았던 뒷자리 값을 앞자리에 재배당
+                    array[j+1] = temp;         // 임시 변수에 넣어두었던 큰 값을 뒷자리로, 정렬 완료
+                }  
+            }
+        }
+        return array[n/2];
+    }
+}
