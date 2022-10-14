@@ -1,0 +1,25 @@
+// 피자 나눠 먹기(2)
+class Solution {
+    public int solution(int n) {
+        /*       
+        #1 첫번째 풀이
+        int pizza = 0;
+        
+        if(n % 6 == 0) {
+            pizza = n;
+        } else {
+            pizza = 6 * n;
+        }
+        return pizza;
+        */
+        
+        // 한 판에 여섯 조각
+        int pizzaBox = 6;
+        // 같은 수로 나눠질 때까지 +6
+        while(pizzaBox % n != 0) {
+            pizzaBox += 6;
+        } 
+        // 박스 수 반환
+        return pizzaBox / 6;
+        }
+}
