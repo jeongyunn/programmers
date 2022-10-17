@@ -1,0 +1,21 @@
+// 짝수는 싫어요
+class Solution {
+    public int[] solution(int n) {
+        int size = 0;
+        
+        if(n % 2 == 0) {
+            size = n / 2;
+        } else {
+            size = n / 2 + 1;
+        }
+        
+        int[] answer = new int[size];	// answer = {} 로 코드를 작성함
+        int num = 1;
+
+        for(int i = 0; i < size; i++){
+            answer[i] = num;
+            num = num + 2;	// num이라는 변수를 새로 만들어 반복문에 넣는 것이 아니라 n을 0부터 늘려가며 넣으려고 했음
+        }
+        return answer;
+    }
+}

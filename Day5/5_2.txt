@@ -1,0 +1,24 @@
+// 각도기
+/*
+    if문의 조건식 설정시 && 연산자를 사용하지 않아 에러 발생
+    -> 연산자의 우선순위가 같을 경우 좌측부터 연산, 
+    (0 < angle < 90) 의 경우 0 < angle 을 우선 처리하여 true < 90 으로 진행됨
+    따라서 boolean 값과 int 값을 비교할 수 없어서 에러 발생하는 것
+*/
+class Solution {
+    public int solution(int angle) {
+        int answer = 0;
+    
+        if(0 < angle && angle < 90) {
+            answer = 1;
+        } else if(angle == 90){
+            answer = 2;
+        } else if(90 < angle && angle < 180) {
+            answer = 3;
+        } else if(angle == 180) {
+            answer = 4;
+        }
+        
+        return answer;
+    }
+}
