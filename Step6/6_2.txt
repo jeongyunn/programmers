@@ -1,0 +1,12 @@
+#양꼬치
+class Solution {
+    public int solution(int n, int k) {
+        int foo = 12000 * n;
+        int bar = 2000 * k;
+        int service = (n / 10) * 2000;
+        
+        int total = foo + bar - service;
+        
+        return total;
+    }
+}
