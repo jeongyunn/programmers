@@ -1,0 +1,19 @@
+#옷 가게 할인 받기
+class Solution {
+    public int solution(int price) {
+        double discount = 0;
+        
+        if(price >= 500000) {
+            discount = 0.2;
+        } else if(price >= 300000) {
+            discount = 0.1;
+        } else if(price >= 100000) {
+            discount = 0.05;
+        }
+        
+        return (int)( price - (price * discount));
+    }
+}
+
+// if문마다 계산식을 넣었고, 이 때마다 double형을 int형으로 강제 형변환하며 에러발생 
+// 마지막 return문에 최종 계산 값을 출력하고 이때 형변환하는 것으로 수정하여 해결

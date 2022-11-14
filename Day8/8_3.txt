@@ -1,0 +1,21 @@
+#점의 위치 구하기
+class Solution {
+    public int solution(int[] dot) {
+        int x = dot[0];
+        int y = dot[1];
+        int res = 0;
+        
+        if(x > 0 && y > 0) {
+            res = 1;
+        } else if(x < 0 && y > 0) {
+            res = 2;
+        } else if(x < 0 && y < 0) {
+            res = 3;
+        } else if(x > 0 && y < 0) {
+            res = 4;
+        }
+        return res;
+        // res에 담지 않고 if문 안에서 각 결과값을 return하였더니 에러 발생
+        // 결과를 담는 변수인 res를 선언하여 마지막에 반환하여 해결함
+    }
+}
