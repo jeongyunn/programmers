@@ -1,0 +1,12 @@
+#세균 증식
+class Solution {
+    public int solution(int n, int t) {
+        int res = (int)(Math.pow(2, t));
+        int answer = res * n;
+
+        return answer;
+    }
+}
+
+// 로직을 짜기 어려워서 입출력 예를 통해 계산해보며 작성함
+// Math.pow()는 Double형으로 출력되어서 int형으로 강제 형변환하여 오류 해결
